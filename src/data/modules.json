@@ -1,0 +1,77 @@
+{
+  "bot": {
+    "name": "Verbalytics"
+  },
+  "copy": {
+    "dailyIntro": "Verbalytics here, it's time for your daily question!",
+    "correctPrefix": "✅ Correct!",
+    "incorrectPrefix": "Not quite. The answer is",
+    "correctSticker": "Great Job!",
+    "incorrectSticker": "Nice Try!",
+    "recordInstructions": "Record your response using voice memo 🎙️ or text \"Help\" for a suggestion.",
+    "helpKeyword": "help",
+    "helpPrefix": "💡 Try this:",
+    "feedbackHeader": "To level up next time:",
+    "knowledgeCheckHeader": "Knowledge Check:",
+    "pickAnOption": "Tap one of the options above (or text the letter A–D) to answer.",
+    "moduleComplete": "Module complete 🎉 See you tomorrow!",
+    "idleReply": "You're all caught up! I'll text you when your next question or module is ready."
+  },
+  "dailyQuestions": [
+    {
+      "id": "dq-implant-root",
+      "question": "Which option replaces the root, not just the visible tooth?",
+      "choices": ["Dental Bridge", "Dental Implant", "Partial Denture", "None of the Above"],
+      "correctIndex": 1,
+      "explanation": "An implant is a post placed in the jawbone that acts as a new root, which helps keep the bone healthy. A bridge and a partial denture only replace the part of the tooth you can see."
+    },
+    {
+      "id": "dq-bridge-anchors",
+      "question": "A patient is missing one tooth, and the teeth on each side already have large fillings. Which option uses those neighboring teeth as anchors?",
+      "choices": ["Dental Bridge", "Dental Implant", "Partial Denture", "None of the Above"],
+      "correctIndex": 0,
+      "explanation": "A traditional bridge puts crowns on the teeth next to the gap to hold the replacement tooth. It's a good fit when those teeth would benefit from crowns anyway."
+    },
+    {
+      "id": "dq-partial-removable",
+      "question": "Which option is removable and usually the lowest up-front cost?",
+      "choices": ["Dental Bridge", "Dental Implant", "Partial Denture", "None of the Above"],
+      "correctIndex": 2,
+      "explanation": "A partial denture clips onto the natural teeth and comes out for cleaning. It usually costs the least up front, but it can feel less natural and often needs adjusting or replacing over time."
+    }
+  ],
+  "voiceModules": [
+    {
+      "id": "vm-cost-objection",
+      "title": "Handling a cost objection",
+      "dueLabel": "5-10 Minute Module due Tmr",
+      "scenario": "Situation: Mrs. Lopez was just told she needs an implant to replace a lower molar. At checkout she frowns and says: \"That's a lot more than I expected. Can't I just do the cheaper option?\"\n\nHow would you respond to her?",
+      "helpTips": [
+        "Start with empathy: \"I completely understand, it's a big decision.\" Then ask what matters most to her: the cost today, or how long it lasts.",
+        "Compare value over time: an implant can last decades with good care. A bridge often needs replacing in 10–15 years and means crowning the healthy teeth next to the gap.",
+        "Offer options, not pressure: mention her insurance estimate, phasing treatment, and monthly payment plans.",
+        "End with a clear next step: \"Would it help if I put together a side-by-side of the implant, bridge, and partial costs for you?\""
+      ],
+      "feedback": {
+        "praise": "acknowledging Mrs. Lopez's concern before explaining her options",
+        "tips": [
+          "Ask one question to learn what she values most (cost now vs. long-term).",
+          "Compare all three options in plain language, not just the implant.",
+          "Mention payment options early so cost doesn't end the conversation.",
+          "Close with one specific next step."
+        ]
+      },
+      "knowledgeCheck": {
+        "question": "Mrs. Lopez says she just wants \"the cheapest option.\" What's the best FIRST response?",
+        "choices": [
+          "\"Then a partial denture is your best bet.\"",
+          "\"I understand. Can I ask what's most important to you: the cost today, or how long it lasts?\"",
+          "\"Implants are really worth it, trust me.\"",
+          "\"You'll have to talk to the doctor about that.\""
+        ],
+        "correctIndex": 1,
+        "explanation": "Acknowledge first, then ask a question. Learning what she values lets you suggest the option that fits her, instead of guessing or pushing."
+      }
+    }
+  ]
+}
