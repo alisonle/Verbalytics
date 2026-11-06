@@ -17,7 +17,11 @@ export function MessageBubble({ message, isLastInGroup, onChoose }: Props) {
     case 'choices':
       return <ChoiceList message={message} onChoose={onChoose} />;
     case 'sticker':
-      return <Sticker label={message.label} />;
+      return message.image ? (
+        <img className="sticker sticker-img" src={message.image} alt={message.label} width={120} height={120} />
+      ) : (
+        <Sticker label={message.label} />
+      );
     case 'audio':
     case 'text': {
       const cls = `bubble ${message.from} ${isLastInGroup ? 'tail' : ''} ${message.kind === 'audio' ? 'audio' : ''}`;

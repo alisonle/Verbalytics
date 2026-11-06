@@ -46,6 +46,8 @@ export function useTrainingFlow(content: ContentFile, chat: Chat) {
       return botSay(verdict, {
         kind: 'sticker',
         label: correct ? copy.correctSticker : copy.incorrectSticker,
+        // Correct answers get the celebratory GIF (if one is configured).
+        image: correct ? copy.correctStickerImage : undefined,
       });
     },
     [botSay, copy],

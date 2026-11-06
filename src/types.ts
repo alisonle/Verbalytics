@@ -38,7 +38,10 @@ export interface Copy {
   dailyIntro: string;
   correctPrefix: string;
   incorrectPrefix: string;
+  /** Label for the correct-answer sticker (also used as the image's alt text). */
   correctSticker: string;
+  /** Optional GIF/image for correct answers, a path under /public. Falls back to the drawn sticker. */
+  correctStickerImage?: string;
   incorrectSticker: string;
   recordInstructions: string;
   helpKeyword: string;
@@ -94,6 +97,8 @@ export interface ChoicesMessage extends BaseMessage {
 export interface StickerMessage extends BaseMessage {
   kind: 'sticker';
   label: string;
+  /** If set, show this image/GIF instead of the drawn SVG sticker. */
+  image?: string;
 }
 
 export interface AudioMessage extends BaseMessage {
